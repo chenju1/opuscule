@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<link href="index.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+	*{margin:0;padding:0;list-style-type:none;}
+	a,img{border:0;}
+	/* flexslider */
+	.flexslider{position:relative;height:400px;overflow:hidden;background:url(images/loading.gif) 50% no-repeat;}
+	.slides{position:relative;z-index:1;}
+	.slides li{height:400px;}
+	.flex-control-nav{position:absolute;bottom:10px;z-index:2;width:100%;text-align:center;}
+	.flex-control-nav li{display:inline-block;width:14px;height:14px;margin:0 5px;*display:inline;zoom:1;}
+	.flex-control-nav a{display:inline-block;width:14px;height:14px;line-height:40px;overflow:hidden;background:url(images/dot.png) right 0 no-repeat;cursor:pointer;}
+	.flex-control-nav .flex-active{background-position:0 0;}
+
+	.flex-direction-nav{position:absolute;z-index:3;width:100%;top:45%;}
+	.flex-direction-nav li a{display:block;width:50px;height:50px;overflow:hidden;cursor:pointer;position:absolute;}
+	.flex-direction-nav li a.flex-prev{left:40px;background:url(images/prev.png) center center no-repeat;}
+	.flex-direction-nav li a.flex-next{right:40px;background:url(images/next.png) center center no-repeat;}
+</style>
+
+<script type="text/javascript">
+var index=0;
+var ulArr;
+var liArr;
+window.onload=function(){
+	ulArr=document.getElementById("content").getElementsByTagName("ul");
+	/*liArr=document.getElementById("dian").getElementsByTagName("li");
+	for(var i=0;i<liArr.length;i++){
+		liArr[i].onmouseover=function(){
+			index=index+1;
+		    clearStyle();
+			this.className="highlight";
+			}
+		}*/
+	autoPlay();
+	}
+/*function clearStyle(){
+		for(var i=0;i<liArr.length;i++){
+			liArr[i].className="";
+			}
+	}*/
+function getIndex(obj,arr){
+	for(var i=0;i<arr.length;i++){
+		if (obj==arr[i]){
+			return i;
+			}
+		return -1;
+		}
+		
+	}
+function hiddenElement(arr){
+	for(var i=0;i<arr.length;i++){
+		arr[i].style.display="none";
+		}
+	}
+function autoPlay(){
+	hiddenElement(ulArr);
+	ulArr[index].style.display="block";
+	index=(index+1) % ulArr.length;
+	window.setTimeout("autoPlay()",3000);	
+}
+</script>
+</head>
+
+<body>
+<div id="header">
+<div id="black">
+<p>服务热线：2333333333</p>
+</div>
+<img class="pos" src="img/lopg.jpg"  style="height:100px; width:300px;">
+<div id="menu">
+<ul>
+<li><a href="index.html">网站首页</a></li>
+<li><a href="anli.html">案例展示</a></li>
+<li><a href="news.html">新闻中心</a></li>
+<li><a href="about.html">关于我们</a></li>
+<li><a href="#">服务项目</a></li>
+<li><a href="#">客户留言</a></li>
+<li><a href="#">联系我们</a></li>
+</ul>
+</div>
+</div>
+
+<script src="/demos/googlegg.js"></script>
+<div class="flexslider">
+	<ul class="slides">
+		<li style="background:url(images/banner1.jpg) 50% 0 no-repeat;"></li>
+		<li style="background:url(images/banner2.jpg) 50% 0 no-repeat;"></li>
+	</ul>
+</div>
+
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.flexslider').flexslider({
+			directionNav: true,
+			pauseOnAction: false
+		});
+	});
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+
+</div>
+
+<div id="guanyu">
+<p>花火设计•完美造型</p>
+</div>
+
+<div id="jump">
+	<ul id="content">
+		<ul>
+    	<li><a href="#"><img src="img/c1.jpg"/></a></li>
+        <li><a href="#"><img src="img/c2.jpg"/></a></li>
+        <li><a href="#"><img src="img/c3.jpg"/></a></li>
+        <li><a href="#"><img src="img/c4.jpg"/></a></li>
+    	</ul>
+    	<ul>
+    	<li><a href="#"><img src="img/c2.jpg"/></a></li>
+        <li><a href="#"><img src="img/c3.jpg" /></a></li>
+        <li><a href="#"><img src="img/c4.jpg" /></a></li>
+        <li><a href="#"><img src="img/c5.jpg" /></a></li>
+    	</ul>
+    	<ul>
+    	<li><a href="#"><img src="img/c3.jpg" /></a></li>
+        <li><a href="#"><img src="img/c4.jpg" /></a></li>
+        <li><a href="#"><img src="img/c5.jpg" /></a></li>
+        <li><a href="#"><img src="img/c9.jpg" style="width:229px; height:265px;"/></a></li>
+        </ul>
+        <ul>
+        <li><a href="#"><img src="img/c4.jpg" /></a></li>
+        <li><a href="#"><img src="img/c5.jpg" /></a></li>
+        <li><a href="#"><img src="img/c9.jpg" style="width:229px; height:265px;"/></a></li>
+        <li><a href="#"><img src="img/c7.jpg" style="width:229px; height:265px;"/></a></li>
+        </ul>
+        <ul>
+        <li><a href="#"><img src="img/c5.jpg" /></a></li>
+        <li><a href="#"><img src="img/c9.jpg" style="width:229px; height:265px;"/></a></li>
+        <li><a href="#"><img src="img/c7.jpg" style="width:229px; height:265px;"/></a></li>
+        <li><a href="#"><img src="img/c1.jpg" /></a></li>
+        </ul>
+        <ul>
+        <li><a href="#"><img src="img/c9.jpg" style="width:229px; height:265px;"/></a></li>
+        <li><a href="#"><img src="img/c7.jpg" style="width:229px; height:265px;"/></a></li>
+        <li><a href="#"><img src="img/c1.jpg" /></a></li>
+        <li><a href="#"><img src="img/c2.jpg" /></a></li>
+        </ul>
+     </ul> 
+ 
+</div>
+
+<div id="last">
+	<div id="left">
+		<img src="img/about.jpg" width="436" height="283">	
+    </div>
+    
+    <div id="right">
+        <span>形象设计概念</span>
+    	<p>形象设计（Image design）也称形象顾问，大多以人体色为基本特征和人的面部及身材、气质及社会角色等各方面综合因素，通过专业诊断工具。现阶段形象设计的杰出代表，测试出其色彩范围与风格类型，帮你找到最合适的服饰色彩、染发色、彩妆色、服饰风格款式，从而解决人们的所有形象问题。形象设计从广义的服务对象上可分为城市形象设计、企业形象设计、人物形象设计、产品形象设计等。
+形象设计，从事的工作范围是对个人形象进行整体设计、指导的。大多以人体色为基本特征和人的面部及身材、气质及社会角色等各方面综合因素，通过专业诊断工具，测试出色彩范围与风格类型，帮你找到最合适的服饰色彩、染发色、彩妆色、服饰风格款式，从而解决人们的所有形象问题。
+形象设计从广义的服务对象上可分为城市形象设计、企业形象设计、人物象设计等。 对形象设计领域进行细分，可以让我们更清晰形象设计的概念，每一个领域的形象设计都需要专业知识，才能成为这个领域的真正合格的形象设计师。
+</p>
+    
+    </div>
+	
+   </div>
+    <div id="hou">
+    	<img src="img/about_bg_03.jpg" >
+    </div>
+    
+</div>
+<div id="footer">
+<ul>
+<li><a href="index.html">网站首页</a></li>
+<li><a href="anli.html">案例展示</a></li>
+<li><a href="news.html">新闻中心</a></li>
+<li><a href="about.html">关于我们</a></li>
+<li><a href="#">服务项目</a></li>
+<li><a href="#">客户留言</a></li>
+<li><a href="#">联系我们</a></li>
+</ul>
+<hr style="height:1px; border-bottom:none; width:1200px;"/>
+<p>版权所有：计应1601陈菊&nbsp;&nbsp;&nbsp; 备案号：233333<br />
+   联系地址：某市某区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系电话：12345678901
+</p>
+</div>
+<img class="zuihou" src="img/logo1.png">
+</body>
+</html>

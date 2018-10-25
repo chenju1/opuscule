@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{ padding:0; margin:0}
+#jump{
+	position:relative;
+	width:1000px;
+	margin:0 auto;
+ }
+#content{ width:2500px;
+height:220px;
+overflow:hidden;
+position:absolute;
+	
+	} 
+#content ul{ clear:both;
+	
+	}	
+#content li{ float:left;
+ list-style:none;
+ margin:0px 10px 0 10px;
+ width:229px; height:265px;
+ position:relative;
+ overflow:hidden;
+ 
+ }
+ 
+ 
+ 
+ 
+ li::before{ width:229px; height:265px; position:absolute; content:"点击查看"; color:#fff; text-align:center; line-height:265px; transform:translate(0,265px); background:rgba(0,0,0,0.2); font-size:20px;} 
+li:hover::before{ transform:translate(0,0); transition:transform 1s ease-out;}
+</style>
+<script type="text/javascript">
+var index=0;
+var ulArr;
+var liArr;
+window.onload=function(){
+	ulArr=document.getElementById("content").getElementsByTagName("ul");
+	/*liArr=document.getElementById("dian").getElementsByTagName("li");
+	for(var i=0;i<liArr.length;i++){
+		liArr[i].onmouseover=function(){
+			index=index+1;
+		    clearStyle();
+			this.className="highlight";
+			}
+		}*/
+	autoPlay();
+	}
+/*function clearStyle(){
+		for(var i=0;i<liArr.length;i++){
+			liArr[i].className="";
+			}
+	}*/
+function getIndex(obj,arr){
+	for(var i=0;i<arr.length;i++){
+		if (obj==arr[i]){
+			return i;
+			}
+		return -1;
+		}
+		
+	}
+function hiddenElement(arr){
+	for(var i=0;i<arr.length;i++){
+		arr[i].style.display="none";
+		}
+	}
+function autoPlay(){
+	hiddenElement(ulArr);
+	ulArr[index].style.display="block";
+	index=(index+1) % ulArr.length;
+	window.setTimeout("autoPlay()",3000);	
+}
+</script>
+</head>
+<body>
+<div id="jump">
+    <div id="txt"><p></p></div> 
+	<ul id="content">
+		<ul>
+    	<li><a href="#"><img src="img/c1.jpg"/></a></li>
+        <li><a href="#"><img src="img/c2.jpg"/></a></li>
+        <li><a href="#"><img src="img/c3.jpg"/></a></li>
+        <li><a href="#"><img src="img/c4.jpg"/></a></li>
+    	</ul>
+    	<ul>
+    	<li><a href="#"><img src="img/c2.jpg"/></a></li>
+        <li><a href="#"><img src="img/c3.jpg" /></a></li>
+        <li><a href="#"><img src="img/c4.jpg" /></a></li>
+        <li><a href="#"><img src="img/c5.jpg" /></a></li>
+    	</ul>
+    	<ul>
+    	<li><a href="#"><img src="img/c3.jpg" /></a></li>
+        <li><a href="#"><img src="img/c4.jpg" /></a></li>
+        <li><a href="#"><img src="img/c5.jpg" /></a></li>
+        <li><a href="#"><img src="img/c9.jpg" style="width:229px; height:265px;"/></a></li>
+        </ul>
+        <ul>
+        <li><a href="#"><img src="img/c4.jpg" /></a></li>
+        <li><a href="#"><img src="img/c5.jpg" /></a></li>
+        <li><a href="#"><img src="img/c9.jpg" style="width:229px; height:265px;"/></a></li>
+        <li><a href="#"><img src="img/c7.jpg" style="width:229px; height:265px;"/></a></li>
+        </ul>
+        <ul>
+        <li><a href="#"><img src="img/c5.jpg" /></a></li>
+        <li><a href="#"><img src="img/c9.jpg" style="width:229px; height:265px;"/></a></li>
+        <li><a href="#"><img src="img/c7.jpg" style="width:229px; height:265px;"/></a></li>
+        <li><a href="#"><img src="img/c1.jpg" /></a></li>
+        </ul>
+        <ul>
+        <li><a href="#"><img src="img/c9.jpg" style="width:229px; height:265px;"/></a></li>
+        <li><a href="#"><img src="img/c7.jpg" style="width:229px; height:265px;"/></a></li>
+        <li><a href="#"><img src="img/c1.jpg" /></a></li>
+        <li><a href="#"><img src="img/c2.jpg" /></a></li>
+        </ul>
+     </ul> 
+ 
+</div>
+</body>
+</html>

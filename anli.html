@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>案例分析</title>
+<link href="anli.css" type="text/css" rel="stylesheet">
+
+<link href="css/lanrenzhijia.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://www.lanrenzhijia.com/ajaxjs/1.3.2/jquery-1.3.2.min.js"></script>
+<script>
+$(document).ready(function() {
+
+	var move = -15
+	     zoom = 1.1;
+
+	$('.item').hover(function() {
+		
+		width = $('.item').width() * zoom;
+		height = $('.item').height() * zoom;
+	
+		$(this).find('img').stop(false,true).animate({'width':width, 'height':height, 'top':move, 'left':move}, {duration:300});
+		$(this).find('div.caption').stop(false,true).fadeIn(300);
+	},
+	function() {
+
+		$(this).find('img').stop(false,true).animate({'width':$('.item').width(), 'height':$('.item').height(), 'top':'0', 'left':'0'}, {duration:300});	
+		$(this).find('div.caption').stop(false,true).fadeOut(400);
+	});
+
+});
+
+</script>
+
+</head>
+
+<body>
+<div id="header">
+<div id="black">
+<p>服务热线：2333333333</p>
+</div>
+<img class="pos" src="img/lopg.jpg"  style="height:100px; width:300px;">
+<div id="menu">
+<ul>
+<li><a href="index.html">网站首页</a></li>
+<li><a href="anli.html">案例展示</a></li>
+<li><a href="news.html">新闻中心</a></li>
+<li><a href="about.html">关于我们</a></li>
+<li><a href="#">服务项目</a></li>
+<li><a href="#">客户留言</a></li>
+<li><a href="#">联系我们</a></li>
+</ul>
+</div>
+</div>
+
+<div id="banner">
+<img src="img/banner1.jpg">
+</div>
+
+<div id="anli">
+<img src="img/anli.png">
+</div>
+<div id="now">
+ <ul>
+ <li><a href="#">复古新娘造型</a></li>
+ <li><a href="#">花想容</a></li>
+ <li><a href="#">复古妆容</a></li>
+ <li><a href="#">古装人物造型</a></li>
+ <li><a href="#">花样新娘</a></li>
+ </ul>
+</div>
+
+<div class="item"> <img src="images/c5.jpg" height="299" width="265" />
+      <div class="caption"> <a href="http://jenniferjohnston.tv"></a>
+        <p>古装人物造型</p>
+      </div>
+    </div>
+    <div class="item"> <img src="images/c1.jpg" height="299" width="265" />
+      <div class="caption"> <a href="http://mimitah.com"></a>
+        <p>花样新娘</p>
+      </div>
+    </div>
+    <div class="item"> <img src="images/c2.jpg" height="299" width="265"/>
+      <div class="caption"> <a href="http://katemcintyre.tv"></a>
+        <p>复古新娘造型</p>
+      </div>
+    </div>
+    
+    <div class="item"> <img src="images/c3.jpg" height="299" width="265"/>
+      <div class="caption"> <a href="http://katemcintyre.tv"></a>
+        <p>花样新娘</p>
+      </div>
+    </div>
+    
+    <div class="item"> <img img src="images/c4.jpg" height="299" width="265" />
+      <div class="caption"> <a href="http://katemcintyre.tv"></a>
+        <p>
+        复古妆容
+        </p>
+      </div>
+    </div>
+    
+    <div class="item"> <img src="images/c5.jpg" height="299" width="265" />
+      <div class="caption"> <a href="http://jenniferjohnston.tv"></a>
+        <p>古装人物造型</p>
+      </div>
+    </div>
+    <div class="item"> <img src="images/c1.jpg" height="299" width="265" />
+      <div class="caption"> <a href="http://mimitah.com"></a>
+        <p>花样新娘</p>
+      </div>
+    </div>
+    <div class="item"> <img src="images/c2.jpg" height="299" width="265"/>
+      <div class="caption"> <a href="http://katemcintyre.tv"></a>
+        <p>复古新娘造型</p>
+      </div>
+    </div>
+    
+    
+    <div class="clear"></div>
+    
+<!--<div id="fan">
+ <li><a href="#">共6页</a></li>
+ <li><a href="#">上一页</a></li>
+ <li><a href="#">1</a></li>
+ <li><a href="#">2</a></li>
+ <li><a href="#">3</a></li>
+ <li><a href="#">4</a></li>
+ <li><a href="#">...</a></li>
+ <li><a href="#">下一页</a></li>
+ </ul>
+</div>    -->
+
+<div id="footer">
+<ul>
+<li><a href="index.html">网站首页</a></li>
+<li><a href="anli.html">案例展示</a></li>
+<li><a href="news.html">新闻中心</a></li>
+<li><a href="about.html">关于我们</a></li>
+<li><a href="#">服务项目</a></li>
+<li><a href="#">客户留言</a></li>
+<li><a href="#">联系我们</a></li>
+</ul>
+<hr style="height:1px; border-bottom:none; width:1200px;"/>
+<p>版权所有：计应1601陈菊&nbsp;&nbsp;&nbsp; 备案号：233333<br />
+   联系地址：某市某区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系电话：12345678901
+</p>
+</div>
+
+<img class="last" src="img/logo1.png">
+</body>
+</html>
